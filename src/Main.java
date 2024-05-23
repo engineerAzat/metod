@@ -15,8 +15,8 @@ public class Main {
         printDeviceVersion(0, 2014);
         printDeviceVersion(1, 2014);
 
-        int days = calculeteDistanse(57);
-        System.out.println("Количество дней = " + days);
+        int days = calculeteDistanse(101);
+        System.out.println("Количество дней " + days);
 
 
     }
@@ -40,6 +40,10 @@ public class Main {
     }
 
     public static int calculeteDistanse (int distanse) {
+        if (distanse > 100){
+            return -1;
+        }
+
         int days = 1;
         if(distanse > 20) {
             days++;
